@@ -1,0 +1,23 @@
+﻿@model List<Order>
+
+<h1>Siparişler</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sipariş No</th>
+            <th>Sipariş Tarihi</th>
+            <th>Gönderildiği Ülke</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderId</td>
+                <td>@order.OrderDate</td>
+                <td>@order.ShipCountry</td>
+            </tr>
+        }
+    </tbody>
+</table>
